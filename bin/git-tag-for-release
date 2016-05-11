@@ -166,9 +166,13 @@ git_tag_for_release_next_version(){
   version=$major
   if [ -n "$minor" ]; then
     version=$version.$minor
+  else
+    version=$version.0
   fi
   if [ -n "$patch" ]; then
     version=$version.$patch
+  else
+    version=$version.0
   fi
   if [ -n "$tip" ]; then
     version=$version.$tip
