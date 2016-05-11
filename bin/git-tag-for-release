@@ -37,7 +37,7 @@ git_tag_for_release_main(){
   git_tag_for_release_check_status
 
   version_prefix="v"
-  last=$(git tag | head -1)
+  last=$(git tag | tail -1)
   last=${last#$version_prefix}
   git_tag_for_release_next_version
 
